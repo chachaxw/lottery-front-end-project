@@ -1,0 +1,39 @@
+
+格式:
+
+[
+
+    {
+        Name: "最外层分类，一般就是直选与任选两种，大部分彩种只有直选一个。",
+        Weight: "权重，用于做排序用。"
+        Sorts:[{
+            Name: "第一层分类，例如五星、四星、选三中三等。",
+            Weight: "同上",
+            Kinds:[{
+                Name: "第二层分类。例如直选、组选等。也就是左侧的分类名称。",
+                Weight: "同上",
+                // 游戏具体玩法
+                Types: [{
+                    Id: "玩法ID",
+                    Name: "玩法名称",
+                    Weight: "同上",
+                    Category: "分类名,也就是最外层",
+                    Sort: "第一层分类名",
+                    Kind: "第二层分类名",
+                    Scale: "赔率",
+                    ScaleBase: "基础赔率",
+                    // 这两个用于辅助呈现选码器
+                    MaxNum: "最大号码",
+                    MinNum: "最小号码",
+                    Style: "玩法选号类型，0=直输，2=选码器",
+                    UnitPosCount: "任选位置数量",
+                    BetCountCalurator: "注码计算器",
+                    BetNumCount: "投注号码数量",
+                    Example: "投注案例",
+                    Explain: "玩法说明",
+                    CanNumDuplicate:"投注号码是否可重复"
+                }]
+            }]
+        }...],
+    },...
+]
